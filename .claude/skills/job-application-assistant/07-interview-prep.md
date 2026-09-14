@@ -16,42 +16,40 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 1. Scaling Backend APIs & Async Task Optimization (Tags Solutions)
+**S:** Tags Solutions operated high-traffic web applications facing degraded response times and blocking operations during heavy request cycles.
+**T:** Architect high-throughput backend services and build an asynchronous processing system to eliminate request bottlenecks.
+**A:** Redesigned REST APIs with Django REST Framework and PostgreSQL, fine-tuned database indexing and ORM queries, and deployed Celery with Redis for background task queueing.
+**R:** Improved API response times by 38%, reduced background task execution times by 55%, and dropped database latency by 47%.
+**Use for:** "Tell me about a time you optimized a slow system", "Describe a complex backend architecture you designed"
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. High-Concurrency Real-Time Chat & State Architecture (Turing)
+**S:** The platform needed to support 10,000+ concurrent active users in collaborative workspaces with minimal message latency and high UI stability.
+**T:** Design resilient frontend and communication pipelines while ensuring high automated test reliability.
+**A:** Built React/TypeScript client-side state architectures, implemented comprehensive automated test suites using Jest and Cypress (achieving 90% test coverage), and containerized the CI/CD pipeline via GitHub Actions.
+**R:** Maintained seamless real-time performance for 10k+ concurrent users, eliminated production regressions, and enabled zero-downtime bi-weekly releases.
+**Use for:** "Describe a frontend scalability challenge you solved", "How do you ensure test quality in fast-moving releases?"
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
-
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+### 3. AI Workflow Automation & Agentic Tooling (Tags Solutions / Maya AI)
+**S:** The engineering team needed faster iteration cycles for complex feature scaffolding and customer automation pipelines.
+**T:** Implement agentic AI workflows and LLM orchestration into core products and developer pipelines.
+**A:** Integrated Anthropic Claude API, OpenAI, Claude Code, and Model Context Protocol (MCP) tooling into daily development workflows and built agentic workflows for lead conversion and automated task execution.
+**R:** Dramatically accelerated feature turnaround, automated routine backend scaffolding, and delivered resilient AI customer agents.
+**Use for:** "How have you utilized AI / LLMs in production?", "Tell me about adopting new technology across a team"
 
 ## Common Tough Questions
 
-### "Why did you leave [previous company]?"
-> [PREPARE YOUR ANSWER - be honest, forward-looking, no negativity about former employer]
+### "Why are you looking for a new role?"
+> I've spent the past several years successfully scaling distributed architectures, optimizing high-traffic databases, and integrating agentic AI into modern web applications. I'm now looking for my next senior role at an innovative organization where I can lead backend/full-stack systems design, solve complex scalability challenges, and build AI-augmented products.
 
-### "You don't have [specific skill/experience]."
-> [PREPARE YOUR ANSWER - acknowledge the gap, bridge to adjacent experience, show willingness to learn]
+### "You don't have extensive experience with [a specific tool like Kafka / Go]."
+> While my core deep expertise is in Python, TypeScript, PostgreSQL, and modern distributed systems, I have strong foundational knowledge of distributed messaging and concurrency paradigms. With my track record of quickly mastering new technologies (like transitioning to MCP and cutting-edge agentic workflows), I can ramp up and be productive in a matter of days.
 
-### "Where do you see yourself in 5 years?"
-> [PREPARE YOUR ANSWER - show ambition aligned with the role's growth path]
+### "Where do you see yourself in 3-5 years?"
+> As a Principal Engineer or Staff Architect, driving core architectural decisions for high-scale distributed platforms, championing engineering excellence and AI-augmented developer productivity across multi-disciplinary teams.
 
 ### "What's your biggest weakness?"
-> [PREPARE YOUR ANSWER - genuine weakness with concrete mitigation strategy]
+> In the past, I tended to dive deep into optimizing every corner of a system manually. I've learned to balance perfectionism with business urgency by establishing clear latency benchmarks and observability thresholds first, focusing deep optimizations where they produce the highest user and business impact.
 
 ### "Why this company specifically?"
 > Customize per company. Must reference: specific projects, company values, market position, or team structure. Never give a generic answer.

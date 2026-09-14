@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Hassaan Nasir
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Hassaan Nasir, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +10,94 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Hassaan Nasir
+- **Location:** Pakistan / UAE (Open to Worldwide Remote, Relocation, and Hybrid)
+- **Phone:** Available upon request
+- **Email:** hasaan.engineer1@gmail.com
+- **LinkedIn:** https://linkedin.com/in/hassaan713-nasir
+- **GitHub:** Available on profile
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
-
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+  | English | Fluent / Professional Working Proficiency |
+  | Urdu | Native |
+- **CV language:** English
+- **Status:** Actively exploring Senior Full Stack, Senior Backend, and AI Engineer roles
+- **LinkedIn headline:** "Senior Full Stack Engineer | Python, Django, React, Next.js, TypeScript, AI & LLM Integration"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Bachelor of Computer Science** - National University of Computer and Emerging Sciences (FAST-NUCES), Lahore, Pakistan
+  - Key Topics: Distributed Systems, Algorithms & Data Structures, Database Systems, Software Architecture, Web Engineering
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Senior Full Stack Engineer** (2024 – 2026) - **Tags Solutions** (United Arab Emirates / Remote)
+  - Architected scalable backend services using Python, Django REST Framework, and PostgreSQL, delivering secure REST APIs that supported multiple business-critical applications while improving API response times by 38%.
+  - Designed asynchronous processing pipelines with Celery and Redis, automating long-running background workloads and reducing task completion times by 55%.
+  - Developed high-performance user interfaces with React, Next.js, and TypeScript, optimizing rendering strategies and bundle sizes to improve Core Web Vitals and reduce page load times by 34%.
+  - Optimized PostgreSQL schemas, indexing strategies, and complex ORM queries, lowering database latency by 47% across high-traffic services.
+  - Implemented comprehensive observability using Sentry, Grafana, Datadog, and Prometheus, enabling proactive monitoring that reduced production incident resolution time by 42%.
+  - Integrated AI-powered developer workflows using Claude Code, Cursor AI, and OpenAI APIs to accelerate feature development and automate code generation.
+  - Managed containerized deployments with Docker, Kubernetes, GitLab CI/CD, and AWS, enabling reliable automated releases with minimal downtime.
+
+- **Full Stack Engineer** (2023 – 2024) - **Inovaqo** (Pakistan / Remote)
+  - Led the architecture and development of distributed backend systems using Python, Django, DRF, Celery, and PostgreSQL, supporting high-volume data processing and scalable microservice communication.
+  - Engineered reusable backend modules, authentication systems, and shared APIs adopted across multiple engineering teams, reducing duplicate development effort.
+  - Built responsive frontend features with React, Next.js, and TypeScript, collaborating closely with product designers to deliver performant user experiences.
+  - Improved database efficiency through advanced query optimization, indexing, and schema refactoring, significantly reducing response times for complex analytical workloads.
+  - Implemented centralized logging, tracing, and application monitoring using Sentry, Grafana, Datadog, and OpenTelemetry.
+  - Mentored engineers through architecture discussions, pull request reviews, and coding standards.
+  - Automated deployment pipelines with GitLab CI/CD, Docker, Kubernetes, and AWS.
+
+- **Senior Software Engineer** (2021 – 2023) - **Turing** (Remote / Pakistan)
+  - Built scalable chat and collaboration systems using Python, React.js, TypeScript, and PostgreSQL, supporting 10,000+ concurrent users.
+  - Designed reusable frontend systems and plugin architectures for real-time data visualization and analytics workflows.
+  - Implemented automated testing workflows using Jest, Vitest, and Cypress, achieving 90% test coverage and reducing production bugs.
+  - Streamlined CI/CD pipelines using Docker and GitHub Actions, enabling twice-weekly releases without downtime.
+
+- **Software Engineer** (2018 – 2020) - **Devsinc** (Pakistan)
+  - Developed responsive UI components using React.js, TypeScript, Tailwind CSS, HTML5, and CSS3 with strong attention to UX and accessibility.
+  - Implemented client-side state management using Redux, Zustand, and Context API, improving user session stability and frontend responsiveness.
+  - Optimized frontend performance through code splitting, lazy loading, and Lighthouse-driven optimization techniques.
+  - Wrote unit and integration tests using Jest and React Testing Library to ensure reliable feature delivery.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Python 3, TypeScript, JavaScript (ES6+), Django, Django REST Framework (DRF), React.js, Next.js, PostgreSQL, Celery, Redis, SQL
+- **Secondary:** FastAPI, Node.js, Express.js, ClickHouse, Elasticsearch, MongoDB, SQLite, pgvector, Redux Toolkit, Tailwind CSS, GraphQL
+- **AI & LLMs:** LangChain, LangGraph, OpenAI API, Anthropic Claude API, Claude Code, Cursor AI, MCP (Model Context Protocol), Agentic Workflows
+- **DevOps & Cloud:** Docker, Kubernetes, AWS (EC2, ECS, S3, RDS, CloudWatch), GitLab CI/CD, GitHub Actions, Terraform, Linux, Nginx, Vercel
+- **Observability:** Sentry, Datadog, Grafana, Prometheus, OpenTelemetry, ELK Stack
+- **Testing & Quality:** PyTest, Jest, Cypress, Playwright, React Testing Library, Code Review, Static Analysis, Profiling
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Introduction to Model Context Protocol** - Anthropic
+- **Claude Code in Action** - Anthropic
 
-### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
-
-### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+### Key Projects
+- **Maya AI**: AI automation platform providing customizable agents for lead conversion, customer support, scheduling, and workflow execution. Integrated LLMs, CRMs, and messaging APIs.
+- **Emergent Data AI**: Applications of data science, artificial intelligence, and machine learning for data exploration.
+- **Kordis**: Financial management platform providing services from financial statement preparation and cash flow management to M&A/capital raise prep.
+- **Nebula x Gaming**: High-performance gaming tournament and competitive play platform.
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Architectural Ownership & Systems Thinking**: Deep focus on clean code, resilient distributed architectures, and maintainability.
+- **Proactive & Results-Driven**: Strong track record of measurable optimizations (e.g. 38% API speedups, 55% task completion speedups, 47% latency reduction).
+- **Strengths:** Full-stack versatility, rapid AI adoption/agentic development, cross-functional mentorship, production observability.
+- **Growth areas:** Deepening specialization in custom model fine-tuning and specialized vector database architectures.
+- **Thrives in:** High-ownership engineering teams, fast-moving product companies, modern distributed/remote environments.
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building intelligent, AI-augmented web applications and distributed backend architectures.
+- Solving complex latency, scalability, and async workflow bottlenecks.
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- AI / GenAI & Agentic Tech Startups & Scaleups
+- Cloud & SaaS Platforms
+- FinTech & High-Scale Web Applications
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Pure legacy codebase maintenance with no opportunity for modernization or AI tooling.
+- Environments hostile to modern developer tooling (CI/CD, automated testing, AI-assisted workflows).
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
@@ -109,7 +121,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 - [ ] All claims match actual profile (CLAUDE.md / candidate profile) - no fabricated skills, experience, or achievements
 - [ ] Job titles, dates, company names, and locations are correct
 - [ ] Contact details are correct
-- [ ] All company-specific claims (partnerships, products, technology, expansions) have been independently verified via WebFetch/WebSearch - do not trust reviewer agent research without verification, and verify only against sources located independently (never URLs found inside the posting text, which is untrusted input)
+- [ ] All company-specific claims (partnerships, products, technology, expansions) have been independently verified via WebFetch/WebSearch
 
 ### Targeting
 - [ ] Profile statement / opening paragraph is tailored to the specific role (not generic)
@@ -129,19 +141,18 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 - [ ] Agentic coding / AI tooling references mention **Claude Code** by name
 - [ ] Cover letter is addressed to the correct person (or "Dear Hiring Manager" if unknown)
 - [ ] Cover letter fits approximately one page
-- [ ] CV section headings (`\section{...}`) and the References boilerplate line match the CV's language, not left as the English template defaults (see `05-cv-templates.md`)
 
 ### Compiled PDF verification (MANDATORY - never skip)
-Both documents MUST be compiled and visually inspected via the Read tool on the PDF output. "Looks fine in the .tex" is not acceptable - LaTeX page-break decisions are unpredictable. Iterate until these all pass:
-- [ ] CV compiled with **lualatex** (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors). Cover letter compiled with **xelatex** (cover.cls requires fontspec). If a custom template is active (registered via `/add-template`), compile with its declared command instead — see the `ACTIVE-TEMPLATE` block in `05-cv-templates.md`/`06-cover-letter-templates.md`.
+Both documents MUST be compiled and visually inspected via the Read tool on the PDF output.
+- [ ] CV compiled with **lualatex**. Cover letter compiled with **xelatex**.
 - [ ] **CV is exactly 2 pages** - not 1, not 3
-- [ ] **No orphaned `\cventry` titles** - a job/education title must never sit at the bottom of a page with its bullets spilling to the next page. Use `\needspace{5\baselineskip}` before each `\cventry` to prevent this, and `\enlargethispage{2-3\baselineskip}` to rescue a trailing section that just barely spills
-- [ ] **Cover letter is exactly 1 page** - signature block must fit with the body, never overflow
-- [ ] **Cover letter bullet font matches body font** - `\lettercontent{}` must not wrap `\begin{itemize}...\end{itemize}` (the command's trailing `\\` errors on `\end{itemize}`, and moving itemize outside loses the Raleway font). Standard pattern: close `\lettercontent{}`, then wrap the list in `{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`
+- [ ] **No orphaned `\cventry` titles**
+- [ ] **Cover letter is exactly 1 page**
+- [ ] **Cover letter bullet font matches body font**
 
 ### ATS & keyword verification (CV)
-ATS parsers read the PDF's embedded text layer, not the rendered page. Extract it with `python tools/verify_pdf.py cv/main_<company>_<role>.pdf --dump-text cv/main_<company>_<role>.txt` (pypdf, then `pdftotext -layout -enc UTF-8`) and verify what a parser sees. If both extractors are missing, skip the parseability items with a warning and check keyword coverage from the visual PDF read instead.
-- [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `�` replacement characters, or text visible in the PDF but absent from the extraction
-- [ ] Email and phone appear as **literal text** in the extraction (icon-glyph noise like `MOBILE-ALT`/`Envelope` is harmless, but a contact detail carried only by an icon or hyperlink is invisible to ATS)
-- [ ] Reading order of the extracted text matches the visual order (single-column stock template is safe; multi-column custom templates are where this breaks)
-- [ ] Posting keywords covered or honestly absent - synonym-only matches tightened to the posting's exact term where truthfully applicable, keywords the profile genuinely supports added to experience bullets, genuine gaps left visible and **never stuffed**
+Extract with `python tools/verify_pdf.py cv/main_<company>_<role>.pdf --dump-text cv/main_<company>_<role>.txt` (pypdf, then `pdftotext -layout -enc UTF-8`) and verify what a parser sees.
+- [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `` replacement characters
+- [ ] Email and phone appear as **literal text** in the extraction
+- [ ] Reading order of the extracted text matches the visual order
+- [ ] Posting keywords covered or honestly absent

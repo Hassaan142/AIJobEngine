@@ -60,9 +60,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Python (Django, DRF, FastAPI), TypeScript, React, Next.js, PostgreSQL, Celery, Redis, REST APIs, Microservices, Docker, Kubernetes, AWS, CI/CD, Observability (Sentry, Datadog), AI integration (Claude Code, OpenAI API, LangChain, MCP).
+**Moderate match areas:** ClickHouse, Elasticsearch, Go, GraphQL, Terraform, Kafka.
+**Weak match areas:** C/C++, Embedded systems, Mobile native development (Swift/Kotlin), legacy Java/Spring monoliths.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +74,9 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Senior Full Stack Engineer, Senior Backend Engineer, Python/Django Developer, AI/LLM Application Engineer, React/Next.js Engineer.
+**Moderate:** Lead DevOps/SRE Engineer, Data Engineer, Engineering Manager.
+**Entry-level:** Core ML Researcher (training foundational models from scratch).
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -91,10 +91,10 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
-- Frequent international travel: FLAG (discuss with user)
+- Worldwide Remote: PASS
+- Hybrid/On-site in UAE / Pakistan: PASS
+- Visa-sponsored relocation (Europe, UK, US, Canada, Gulf): PASS
+- Non-sponsored on-site requiring local permit in ineligible geography: FAIL
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
@@ -107,19 +107,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Lead the architecture and delivery of high-impact full-stack and AI-driven platforms.
+- Drive adoption of modern agentic workflows (Claude Code, MCP, automated testing) across engineering teams.
+- Continue expanding leadership scope in distributed systems, backend scaling, and intelligent products.
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: Architecting clean backend systems, optimizing latency and concurrency, building agentic AI features, mentoring developers.
+- Tasks that drain: Manual repetitive testing without CI/CD, micromanagement, unsupported legacy maintenance without refactoring buy-in.
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Focus on competitive senior compensation and stable organizations.
+- **Flexibility**: Preference for remote or flexible working hours.
+- **Professional development**: Continuous hands-on work with modern AI frameworks and cloud architectures.
 
 ### 6. Salary Benchmark (Optional)
 

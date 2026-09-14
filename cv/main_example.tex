@@ -1,55 +1,36 @@
-%% Example CV - [YOUR_NAME]
+%% Master CV - Hassaan Nasir
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
-%%
-%% SETUP: Run /setup to populate this with your actual information.
-%% Compile with: lualatex main_example.tex
-%% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
 % Force the name and section headings to render in moderncv blue (color1).
-% Default banking leaves them black: moderncvstylebanking.sty's \colorlet
-% copies (not aliases) the pre-scheme accent colour, so the name colours are
-% frozen before \moderncvcolor runs. Re-let them after. \namefont is the hook
-% every name-style macro routes through, so this also works on moderncv 2.3.1
-% (Debian/Ubuntu apt), which has no \firstnamestyle/\lastnamestyle at all.
-\renewcommand*{\namefont}{\fontsize{34}{36}\bfseries\upshape}
+\renewcommand*{\namefont}{\fontsize{32}{34}\bfseries\upshape}
 \colorlet{firstnamecolor}{color1}
 \colorlet{lastnamecolor}{color1}
 \colorlet{namecolor}{color1}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
-% moderncv loads hyperref itself in an \AtEndPreamble hook, so \hypersetup
-% must go in an \AtEndPreamble of our own: on moderncv < 2.4 a top-level
-% \usepackage{hyperref} clashes with the class's own
-% \RequirePackage[unicode]{hyperref}. From 2.4.0 the class passes its options
-% through \PassOptionsToPackage instead, which is what removes that clash.
 \AtEndPreamble{\hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
-    % Keep pdfpagemode=UseNone: this block runs after moderncv's own
-    % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
-    % value here would win and open every CV in fullscreen presentation mode.
+    pdftitle={Hassaan Nasir - CV},
     pdfpagemode=UseNone,
 }}
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
+\usepackage{needspace}
 
 % personal data
-\name{[First]}{[Last]}
-% If you have no address to list, DELETE this whole line. \address{}{}{} fails
-% with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Hassaan}{Nasir}
+\address{Pakistan / UAE (Open to Worldwide Remote)}{}{}
+\email{hasaan.engineer1@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/hassaan713-nasir}{LinkedIn: in/hassaan713-nasir}}
 
 \begin{document}
 
@@ -59,8 +40,8 @@
 %     PROFILE STATEMENT
 % ============================================================
 
-\vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\vspace{4pt}
+\small{Senior Full Stack Engineer with 8+ years of experience architecting and scaling resilient web applications using Python, Django, React, Next.js, Node.js, and TypeScript. Expert in designing high-throughput REST APIs, asynchronous pipelines, distributed microservices, and PostgreSQL optimizations. Deeply experienced in integrating modern AI/LLM developer workflows (Claude Code, OpenAI, LangChain, MCP) to build high-impact intelligent products and accelerate engineering velocity.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -69,17 +50,12 @@
 \section{Core Competencies}
 \vspace{1pt}
 \begin{itemize}
-
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
-
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
-
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
-
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
-
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
-
+\item \textbf{Backend \& Distributed Systems}: Python 3, Django, Django REST Framework, FastAPI, Celery, Redis, Microservices, RESTful APIs, Node.js, Express.js.
+\item \textbf{Frontend \& UI Engineering}: React.js, Next.js, TypeScript, JavaScript (ES6+), Redux Toolkit, Zustand, Tailwind CSS, Material UI, Performance \& Core Web Vitals.
+\item \textbf{AI \& LLM Integration}: LangChain, LangGraph, OpenAI API, Anthropic Claude API, Claude Code, Cursor AI, Model Context Protocol (MCP), Agentic Workflows.
+\item \textbf{Databases \& Search}: PostgreSQL (query optimization, indexing, schema design), ClickHouse, Elasticsearch, Redis, MongoDB, pgvector, Amazon RDS.
+\item \textbf{Cloud \& DevOps}: Docker, Kubernetes, AWS (EC2, ECS, S3, RDS, CloudWatch), GitLab CI/CD, GitHub Actions, Linux, Nginx, Terraform.
+\item \textbf{Observability \& Quality}: Sentry, Datadog, Grafana, Prometheus, OpenTelemetry, PyTest, Jest, Cypress, Playwright.
 \end{itemize}
 
 % ============================================================
@@ -91,33 +67,69 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2024--2026}{Senior Full Stack Engineer}{Tags Solutions}{United Arab Emirates / Remote}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1 - be specific, use numbers where possible]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
-    \item {[Achievement or responsibility 4]}
+    \item {Architected scalable backend services using Python, Django REST Framework, and PostgreSQL, delivering secure REST APIs that supported business-critical systems while improving API response times by 38\%.}
+    \item {Designed asynchronous processing pipelines with Celery and Redis, automating long-running background workloads and cutting task completion times by 55\%.}
+    \item {Developed high-performance user interfaces with React, Next.js, and TypeScript, optimizing rendering and bundle sizes to reduce page load times by 34\%.}
+    \item {Optimized PostgreSQL schemas, indexing strategies, and complex ORM queries, reducing database latency by 47\% across high-traffic services.}
+    \item {Implemented comprehensive observability using Sentry, Grafana, Datadog, and Prometheus, cutting production incident resolution times by 42\%.}
+    \item {Integrated AI-powered developer workflows with Claude Code, Cursor AI, and OpenAI APIs to accelerate feature delivery and automate code generation.}
+    \item {Managed containerized deployments with Docker, Kubernetes, GitLab CI/CD, and AWS with minimal downtime.}
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Inovaqo ---
+\needspace{5\baselineskip}
+\item{\cventry{2023--2024}{Full Stack Engineer}{Inovaqo}{Pakistan / Remote}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
+    \item {Led the architecture and development of distributed backend systems using Python, Django, DRF, Celery, and PostgreSQL for high-volume data processing.}
+    \item {Engineered reusable backend modules, authentication systems, and shared APIs adopted across multiple engineering teams.}
+    \item {Built responsive frontend features with React, Next.js, and TypeScript in close collaboration with product designers.}
+    \item {Implemented centralized logging, tracing, and application monitoring using Sentry, Grafana, Datadog, and OpenTelemetry.}
+    \item {Mentored junior and mid-level engineers through architecture discussions, pull request reviews, and coding standards.}
+    \item {Automated deployment pipelines with GitLab CI/CD, Docker, Kubernetes, and AWS.}
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Turing ---
+\needspace{5\baselineskip}
+\item{\cventry{2021--2023}{Senior Software Engineer}{Turing}{Remote / Pakistan}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
+    \item {Built scalable chat and collaboration systems using Python, React.js, TypeScript, and PostgreSQL, supporting 10,000+ concurrent users.}
+    \item {Designed reusable frontend systems and plugin architectures for real-time data visualization and analytics workflows.}
+    \item {Implemented automated testing workflows using Jest, Vitest, and Cypress, achieving 90\% test coverage and reducing production bugs.}
+    \item {Streamlined CI/CD pipelines using Docker and GitHub Actions, enabling twice-weekly releases without downtime.}
 \end{itemize}}}
 
+\vspace{3pt}
+
+% --- Devsinc ---
+\needspace{5\baselineskip}
+\item{\cventry{2018--2020}{Software Engineer}{Devsinc}{Pakistan}{}{\vspace{1pt}
+\begin{itemize}
+    \item {Developed responsive UI components using React.js, TypeScript, Tailwind CSS, HTML5, and CSS3 with strong focus on UX and accessibility.}
+    \item {Implemented client-side state management using Redux, Zustand, and Context API, improving session stability.}
+    \item {Optimized frontend performance through code splitting, lazy loading, and Lighthouse-driven optimizations.}
+    \item {Wrote comprehensive unit and integration tests using Jest and React Testing Library.}
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     KEY PROJECTS
+% ============================================================
+
+\section{Featured Projects}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{Maya AI}: AI automation platform providing customizable agents for lead conversion, customer support, scheduling, and workflow execution. Integrated LLMs, CRMs, and messaging APIs.
+\item \textbf{Emergent Data AI}: Data exploration platform leveraging AI and machine learning architectures for analytics.
+\item \textbf{Kordis}: Financial management platform providing financial statement preparation and cash flow automation.
+\item \textbf{Nebula x Gaming}: High-performance competitive gaming tournament platform.
 \end{itemize}
 
 % ============================================================
@@ -127,17 +139,20 @@
 \section{Education}
 \vspace{1pt}
 \begin{itemize}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\item{\cventry{2014--2018}{Bachelor of Computer Science}{National University of Computer and Emerging Sciences (FAST-NUCES)}{Lahore, Pakistan}{}{\vspace{1pt}
+Key Topics: Distributed Systems, Algorithms \& Data Structures, Database Systems, Software Architecture.
 }}
+\end{itemize}
 
-\vspace{3pt}
+% ============================================================
+%     CERTIFICATIONS
+% ============================================================
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
-
+\section{Certifications}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{Introduction to Model Context Protocol (MCP)} -- Anthropic
+\item \textbf{Claude Code in Action} -- Anthropic
 \end{itemize}
 
 % ============================================================
@@ -147,27 +162,7 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item {[Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).}
-\end{itemize}
-
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item {[Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item {English (Fluent / Professional Working Proficiency), Urdu (Native).}
 \end{itemize}
 
 % ============================================================

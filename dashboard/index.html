@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Job Search Command Center | Hassaan Nasir</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="profile-brand">
+        <div class="profile-avatar">HN</div>
+        <div class="profile-info">
+          <h1>
+            Hassaan Nasir
+            <span class="verified-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              AI Profile Verified
+            </span>
+          </h1>
+          <div class="profile-subtitle">Senior Full Stack & AI Engineer · Python, Django, React, Next.js, Claude Code</div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="pill-stat">
+          <span>Active Pipeline:</span>
+          <strong id="header-active-count">2</strong>
+        </div>
+        <div class="pill-stat">
+          <span>Fit Target:</span>
+          <strong style="color: #10b981;">&gt;85%</strong>
+        </div>
+        <button class="theme-toggle" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <span id="theme-icon">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs" role="tablist">
+      <button class="tab-btn active" data-tab="overview" role="tab">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        Overview & Metrics
+      </button>
+      <button class="tab-btn" data-tab="search" role="tab">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        Live Job Search Hub
+      </button>
+      <button class="tab-btn" data-tab="evaluator" role="tab">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        AI Fit Evaluator
+      </button>
+      <button class="tab-btn" data-tab="kanban" role="tab">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"></path></svg>
+        Application Pipeline (Kanban)
+      </button>
+      <button class="tab-btn" data-tab="cv-studio" role="tab">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+        CV & Template Studio
+      </button>
+      <button class="tab-btn" data-tab="interview" role="tab">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+        STAR Interview Lab
+      </button>
+    </nav>
+
+    <!-- TAB 1: Overview & Metrics -->
+    <section id="tab-overview" class="tab-content active">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-content">
+            <span class="stat-label">Total Applications Tracked</span>
+            <div class="stat-value" id="stat-total">0</div>
+            <span class="stat-trend">Synced with CSV</span>
+          </div>
+          <div class="stat-icon">📈</div>
+        </div>
+
+        <div class="stat-card blue">
+          <div class="stat-content">
+            <span class="stat-label">Active in Process</span>
+            <div class="stat-value" id="stat-active">0</div>
+            <span class="stat-trend" style="color: var(--status-applied);">In review & screening</span>
+          </div>
+          <div class="stat-icon">⚡</div>
+        </div>
+
+        <div class="stat-card amber">
+          <div class="stat-content">
+            <span class="stat-label">Interviews Scheduled</span>
+            <div class="stat-value" id="stat-interview">0</div>
+            <span class="stat-trend" style="color: var(--status-interview);">High engagement</span>
+          </div>
+          <div class="stat-icon">🎙️</div>
+        </div>
+
+        <div class="stat-card green">
+          <div class="stat-content">
+            <span class="stat-label">Avg. Technical Fit</span>
+            <div class="stat-value" id="stat-avg-fit">92%</div>
+            <span class="stat-trend" style="color: var(--status-hired);">High match rate</span>
+          </div>
+          <div class="stat-icon">🎯</div>
+        </div>
+      </div>
+
+      <!-- Quick Action Strip -->
+      <div class="action-strip">
+        <div class="action-strip-text">
+          <h3>Ready to discover new high-fit engineering roles?</h3>
+          <p>Scan 50+ ATS platforms and LinkedIn with your personalized candidate profile.</p>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <button class="btn-primary" onclick="switchTab('search')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Search Live Jobs
+          </button>
+          <button class="btn-secondary" onclick="openAddJobModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add Application
+          </button>
+        </div>
+      </div>
+
+      <!-- Charts Grid -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <span>📊</span> Application Pipeline Funnel
+            </div>
+            <span class="badge-count" id="funnel-badge">Conversion rate</span>
+          </div>
+          <div class="chart-svg-container" id="funnel-chart-box">
+            <!-- Dynamic SVG Chart injected here -->
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <span>🥧</span> Status Distribution
+            </div>
+            <span class="badge-count" id="doughnut-badge">Live Breakdown</span>
+          </div>
+          <div class="chart-svg-container" id="doughnut-chart-box">
+            <!-- Dynamic SVG Doughnut injected here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: Live Job Search Hub -->
+    <section id="tab-search" class="tab-content">
+      <div class="search-controls">
+        <div class="search-input-group">
+          <span class="search-icon-inside">🔍</span>
+          <input type="text" id="search-query-input" placeholder="Role keyword (e.g. Senior Full Stack, AI Engineer, Python)..." value="Senior Full Stack Engineer">
+        </div>
+        
+        <select class="filter-select" id="search-portal-select">
+          <option value="freehire">Freehire (50+ ATS Aggregators: Greenhouse, Lever, Ashby)</option>
+          <option value="linkedin">LinkedIn Public Guest Portal</option>
+        </select>
+
+        <select class="filter-select" id="search-location-select">
+          <option value="Remote">Remote / Global</option>
+          <option value="United Arab Emirates">United Arab Emirates / Dubai</option>
+          <option value="United States">United States</option>
+          <option value="Europe">Europe</option>
+        </select>
+
+        <button class="btn-primary" id="btn-run-search" onclick="executeJobSearch()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          Search Jobs
+        </button>
+      </div>
+
+      <div id="search-status-bar" style="margin-bottom: 16px; font-size: 13px; color: var(--text-secondary); display: none;"></div>
+
+      <div class="job-results-grid" id="job-results-container">
+        <!-- Live jobs populated dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 3: AI Fit Evaluator -->
+    <section id="tab-evaluator" class="tab-content">
+      <div class="evaluator-layout">
+        <!-- Form Left -->
+        <div class="evaluator-form-card">
+          <h2 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 6px;">Evaluate Job Posting Match</h2>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">
+            Paste any job description to run a 5-dimension AI fit evaluation against Hassaan Nasir's profile.
+          </p>
+
+          <div class="form-group">
+            <label for="eval-job-title">Job Title</label>
+            <input type="text" id="eval-job-title" placeholder="e.g. Senior Full Stack Engineer / AI Specialist" value="Senior Full Stack AI Engineer">
+          </div>
+
+          <div class="form-group">
+            <label for="eval-company-name">Company Name</label>
+            <input type="text" id="eval-company-name" placeholder="e.g. Anthropic, Deployly, OpenAI" value="Deployly AI">
+          </div>
+
+          <div class="form-group">
+            <label for="eval-job-desc">Job Description & Requirements</label>
+            <textarea id="eval-job-desc" placeholder="Paste full job description text or requirements here...">We are looking for a Senior Full Stack Engineer to lead our core AI platform. 
+
+Requirements:
+- 5+ years of experience with Python, Django, DRF, or FastAPI
+- Strong frontend skills in React, Next.js, and TypeScript
+- Experience building asynchronous systems with Celery and Redis
+- PostgreSQL database design and query optimization
+- Familiarity with LLM integration (Claude Code, OpenAI, LangChain, MCP)
+- Cloud deployment with Docker, Kubernetes, and AWS CI/CD pipelines
+- Strong focus on observability (Sentry, Datadog) and clean code architecture</textarea>
+          </div>
+
+          <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="runFitEvaluation()">
+            <span>⚡</span> Calculate Instant 5D Fit Score
+          </button>
+        </div>
+
+        <!-- Results Right -->
+        <div class="evaluator-results-card" id="evaluator-results-box">
+          <div class="score-hero">
+            <div class="score-badge-circle">
+              <span class="num" id="eval-overall-score">94</span>
+              <span class="denom">/ 100</span>
+            </div>
+            <div class="verdict-title" id="eval-verdict-text" style="color: var(--status-hired);">Exceptional Match</div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Direct 8+ years alignment across all primary tech requirements</p>
+          </div>
+
+          <div class="score-breakdown-list">
+            <div class="score-dim-row">
+              <span style="font-weight: 600; width: 140px;">Technical Skills</span>
+              <div class="score-bar-bg"><div class="score-bar-fill" id="bar-tech" style="width: 96%;"></div></div>
+              <strong id="val-tech">96/100</strong>
+            </div>
+            <div class="score-dim-row">
+              <span style="font-weight: 600; width: 140px;">Experience Level</span>
+              <div class="score-bar-bg"><div class="score-bar-fill" id="bar-exp" style="width: 95%;"></div></div>
+              <strong id="val-exp">95/100</strong>
+            </div>
+            <div class="score-dim-row">
+              <span style="font-weight: 600; width: 140px;">Behavioral & Culture</span>
+              <div class="score-bar-bg"><div class="score-bar-fill" id="bar-beh" style="width: 94%;"></div></div>
+              <strong id="val-beh">94/100</strong>
+            </div>
+            <div class="score-dim-row">
+              <span style="font-weight: 600; width: 140px;">Location / Remote</span>
+              <div class="score-bar-bg"><div class="score-bar-fill" id="bar-loc" style="width: 100%; background: #10b981;"></div></div>
+              <strong id="val-loc">PASS</strong>
+            </div>
+            <div class="score-dim-row">
+              <span style="font-weight: 600; width: 140px;">Career Alignment</span>
+              <div class="score-bar-bg"><div class="score-bar-fill" id="bar-car" style="width: 92%;"></div></div>
+              <strong id="val-car">92/100</strong>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <h4 style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Key Strengths:</h4>
+            <ul id="eval-strengths-list" style="font-size: 12px; color: var(--text-secondary); padding-left: 18px; line-height: 1.6;">
+              <li>8+ years deep expertise in Python, Django REST Framework, PostgreSQL, and Next.js.</li>
+              <li>Quantified track record: 38% API speedup, 55% task completion speedup.</li>
+              <li>Certified in Anthropic Model Context Protocol (MCP) & Claude Code.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-subtle); display: flex; gap: 10px;">
+            <button class="btn-primary" style="flex: 1; font-size: 13px;" onclick="saveEvaluatedJobToPipeline()">
+              ➕ Save to Pipeline
+            </button>
+            <button class="btn-secondary" style="font-size: 13px;" onclick="switchTab('cv-studio')">
+              📄 Tailor CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: Application Pipeline (Kanban) -->
+    <section id="tab-kanban" class="tab-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+        <div>
+          <h2 style="font-family: 'Outfit', sans-serif; font-size: 18px;">Application Pipeline Tracker</h2>
+          <p style="font-size: 13px; color: var(--text-secondary);">Drag & drop or click cards to update application progress.</p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-secondary" onclick="exportTrackerCSV()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Export CSV
+          </button>
+          <button class="btn-primary" onclick="openAddJobModal()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add Application
+          </button>
+        </div>
+      </div>
+
+      <div class="kanban-board">
+        <!-- Drafted -->
+        <div class="kanban-col" data-status="drafted" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'drafted')">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">
+              <span style="color: var(--status-drafted);">●</span> Drafted
+            </span>
+            <span class="badge-count" id="count-drafted">0</span>
+          </div>
+          <div class="kanban-cards" id="cards-drafted"></div>
+        </div>
+
+        <!-- Applied -->
+        <div class="kanban-col" data-status="applied" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'applied')">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">
+              <span style="color: var(--status-applied);">●</span> Applied (Active)
+            </span>
+            <span class="badge-count" id="count-applied">0</span>
+          </div>
+          <div class="kanban-cards" id="cards-applied"></div>
+        </div>
+
+        <!-- Interview -->
+        <div class="kanban-col" data-status="interview" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'interview')">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">
+              <span style="color: var(--status-interview);">●</span> Interview Stages
+            </span>
+            <span class="badge-count" id="count-interview">0</span>
+          </div>
+          <div class="kanban-cards" id="cards-interview"></div>
+        </div>
+
+        <!-- Offer -->
+        <div class="kanban-col" data-status="offer" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'offer')">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">
+              <span style="color: var(--status-offer);">●</span> Offer
+            </span>
+            <span class="badge-count" id="count-offer">0</span>
+          </div>
+          <div class="kanban-cards" id="cards-offer"></div>
+        </div>
+
+        <!-- Closed / Rejected -->
+        <div class="kanban-col" data-status="rejected" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'rejected')">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">
+              <span style="color: var(--status-rejected);">●</span> Closed / Rejected
+            </span>
+            <span class="badge-count" id="count-rejected">0</span>
+          </div>
+          <div class="kanban-cards" id="cards-rejected"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: CV & Template Studio -->
+    <section id="tab-cv-studio" class="tab-content">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <!-- Left: Elevator Pitches -->
+        <div class="chart-card">
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 17px; margin-bottom: 12px;">Tailored Profile Statements</h3>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
+            Targeted elevator pitches prepared for your specific application directions.
+          </p>
+
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <strong style="font-size: 13px; color: var(--accent-primary);">1. Senior Full Stack & Backend Roles</strong>
+              <button class="btn-text" onclick="copyText('pitch-1')">Copy</button>
+            </div>
+            <p id="pitch-1" style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+              Senior Full Stack Engineer with 8+ years of experience designing and scaling distributed web applications using Python, Django, React, Next.js, TypeScript, and PostgreSQL. Proven track record of reducing API response times by 38%, cutting async pipeline runtimes by 55%, and driving comprehensive observability with Datadog and Sentry. Experienced in cloud-native containerized deployments across AWS and Kubernetes.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <strong style="font-size: 13px; color: var(--status-hired);">2. AI & LLM Application Engineer Roles</strong>
+              <button class="btn-text" onclick="copyText('pitch-2')">Copy</button>
+            </div>
+            <p id="pitch-2" style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+              Senior Full Stack & AI Engineer specializing in productionizing LLMs, agentic workflows (LangChain, LangGraph, Claude Code, Model Context Protocol), and scalable backend architectures. Combines 8+ years of robust Python/TypeScript distributed systems experience with cutting-edge AI workflow automation and vector search integration to deliver resilient, high-throughput intelligent systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Master LaTeX CV Preview -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 17px;">Master LaTeX CV Source (`main_example.tex`)</h3>
+            <button class="btn-text" onclick="copyText('latex-cv-code')">Copy LaTeX</button>
+          </div>
+          <pre id="latex-cv-code" style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #a5b4fc; max-height: 420px; overflow-y: auto; line-height: 1.5;">\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+\name{Hassaan}{Nasir}
+\address{Pakistan / UAE (Open to Worldwide Remote)}{}{}
+\email{hasaan.engineer1@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/hassaan713-nasir}{LinkedIn: in/hassaan713-nasir}}
+
+\begin{document}
+\makecvtitle
+
+\section{Core Competencies}
+\begin{itemize}
+\item \textbf{Backend \& Distributed Systems}: Python 3, Django, DRF, FastAPI, Celery, Redis, Microservices, PostgreSQL.
+\item \textbf{Frontend \& UI Engineering}: React.js, Next.js, TypeScript, Redux Toolkit, Tailwind CSS.
+\item \textbf{AI \& LLM Integration}: Claude Code, Anthropic Claude API, OpenAI API, LangChain, MCP.
+\item \textbf{Cloud \& DevOps}: Docker, Kubernetes, AWS (EC2, ECS, S3, RDS), GitLab CI/CD, GitHub Actions.
+\end{itemize}
+
+\section{Professional Experience}
+\item{\cventry{2024--2026}{Senior Full Stack Engineer}{Tags Solutions}{UAE / Remote}{}{
+  \begin{itemize}
+    \item {Architected scalable backend REST APIs improving response times by 38\%.}
+    \item {Designed asynchronous processing pipelines with Celery and Redis reducing task runtime by 55\%.}
+    \item {Reduced database latency by 47\% through advanced PostgreSQL schema indexing.}
+  \end{itemize}
+}}
+\end{document}</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 6: STAR Interview Lab -->
+    <section id="tab-interview" class="tab-content">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <!-- Left: Ready-Made STAR Stories -->
+        <div class="chart-card">
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 17px; margin-bottom: 8px;">Proven STAR Interview Answers</h3>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
+            Quantified achievements mapped directly to standard behavioral and technical questions.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px;">
+              <h4 style="font-size: 14px; color: var(--accent-primary); margin-bottom: 6px;">
+                1. System Performance & Concurrency (Tags Solutions)
+              </h4>
+              <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
+                <strong>Situation:</strong> High request load was causing latency degradation.<br>
+                <strong>Task:</strong> Redesign backend architectures and async task execution.<br>
+                <strong>Action:</strong> Implemented Django REST Framework with Celery/Redis queueing and PostgreSQL indexing refactors.<br>
+                <strong>Result:</strong> 38% faster API response times, 55% reduction in background task duration, and 47% lower DB latency.
+              </p>
+            </div>
+
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px;">
+              <h4 style="font-size: 14px; color: var(--status-applied); margin-bottom: 6px;">
+                2. Real-Time Collaboration & Concurrency (Turing)
+              </h4>
+              <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
+                <strong>Situation:</strong> Scaling chat & collaboration tools for 10,000+ concurrent active users.<br>
+                <strong>Task:</strong> Ensure zero-downtime releases and resilient UI state synchronization.<br>
+                <strong>Action:</strong> Engineered React/TypeScript plugin architecture and automated CI/CD test suites with Jest & Cypress achieving 90% test coverage.<br>
+                <strong>Result:</strong> Seamless high-concurrency uptime and bi-weekly reliable zero-downtime deployments.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Tough Interview Flashcards -->
+        <div class="chart-card">
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 17px; margin-bottom: 8px;">Tough Question Flashcards</h3>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
+            Strategic answers for common high-friction interview topics.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px;">
+              <strong style="font-size: 13px; color: var(--text-primary); display: block; margin-bottom: 4px;">
+                "Where do you see yourself in 3-5 years?"
+              </strong>
+              <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
+                "As a Principal Engineer or Staff Architect, driving core architectural decisions for high-scale distributed platforms, championing engineering excellence and AI-augmented developer productivity across multi-disciplinary teams."
+              </p>
+            </div>
+
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px;">
+              <strong style="font-size: 13px; color: var(--text-primary); display: block; margin-bottom: 4px;">
+                "What's your biggest strength & weakness?"
+              </strong>
+              <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
+                <strong>Strength:</strong> Rapid architectural adaptability and full-stack performance optimization.<br>
+                <strong>Growth area:</strong> Used to over-optimize non-critical modules early; now I rigorously measure APM metrics first to focus optimizations where business impact is highest.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Add Application Modal -->
+  <div class="modal-backdrop" id="add-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Add Job Application</h3>
+        <button class="close-btn" onclick="closeAddJobModal()">✕</button>
+      </div>
+
+      <form id="add-job-form" onsubmit="handleAddJobSubmit(event)">
+        <div class="form-group">
+          <label>Company Name</label>
+          <input type="text" id="modal-company" required placeholder="e.g. Anthropic, Google, Stripe">
+        </div>
+
+        <div class="form-group">
+          <label>Role Title</label>
+          <input type="text" id="modal-role" required placeholder="e.g. Senior Full Stack Engineer">
+        </div>
+
+        <div class="form-group">
+          <label>Sector / Domain</label>
+          <input type="text" id="modal-sector" placeholder="e.g. AI / Developer Tools, FinTech" value="AI & SaaS">
+        </div>
+
+        <div class="form-group">
+          <label>Channel / Source</label>
+          <select class="filter-select" style="width: 100%;" id="modal-channel">
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="Freehire">Freehire / ATS</option>
+            <option value="Referral">Referral</option>
+            <option value="Company Website">Company Website</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Initial Status</label>
+          <select class="filter-select" style="width: 100%;" id="modal-status">
+            <option value="drafted">Drafted</option>
+            <option value="applied">Applied (Active)</option>
+            <option value="interview">Interview</option>
+            <option value="offer">Offer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Job Posting URL</label>
+          <input type="url" id="modal-source" placeholder="https://...">
+        </div>
+
+        <div class="form-group">
+          <label>Notes</label>
+          <textarea id="modal-notes" style="min-height: 80px;" placeholder="Key requirements, salary details, or interview dates..."></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 20px;">
+          <button type="button" class="btn-secondary" onclick="closeAddJobModal()">Cancel</button>
+          <button type="submit" class="btn-primary">Save to Pipeline</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
